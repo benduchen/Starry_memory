@@ -1,0 +1,27 @@
+{
+  "display": {
+    "icon": {
+      "item": "starry_mod:material/original_star_ingot"
+    },
+    "title": "星火燎原",
+    "description": "将粗原星冶炼成锭",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "starry_mod:find_raw_star",
+  "criteria": {
+    "get_ingot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "starry_mod:material/original_star_ingot"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

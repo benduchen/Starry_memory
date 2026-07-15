@@ -1,0 +1,30 @@
+{
+  "display": {
+    "icon": {
+      "item": "starry_mod:tool/half_star_sword"
+    },
+    "title": "半星之剑",
+    "description": "剑士的故事，是自己来书写的",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "starry_mod:smelt_ingot",
+  "criteria": {
+    "get_sword": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "starry_mod:tool/half_star_sword"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 50
+  }
+}

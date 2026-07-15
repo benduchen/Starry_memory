@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_material/original_star_ingot": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "starry_mod:material/original_star_ingot"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "starry_mod:material/golden_tear_crystal"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_material/original_star_ingot",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "starry_mod:material/golden_tear_crystal"
+    ]
+  },
+  "sends_telemetry_event": false
+}

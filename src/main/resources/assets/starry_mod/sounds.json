@@ -1,0 +1,5 @@
+﻿{
+  "narrator.memorandum_first_equip": {
+    "sounds": [{ "name": "starry_mod:narrator/memorandum_first_equip", "stream": true }]
+  }
+}

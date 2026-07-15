@@ -1,0 +1,27 @@
+{
+  "display": {
+    "icon": {
+      "item": "starry_mod:material/raw_original_star"
+    },
+    "title": "矿中金光",
+    "description": "外表被蓝色的粗矿包裹，矿中闪烁着金光，没错！",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "starry_mod:get_memorandum",
+  "criteria": {
+    "get_raw": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "starry_mod:material/raw_original_star"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

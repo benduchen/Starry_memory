@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 1.0,
+  "group": "original_star_ingot",
+  "ingredient": {
+    "item": "starry_mod:original_star_ore"
+  },
+  "result": "starry_mod:material/original_star_ingot"
+}

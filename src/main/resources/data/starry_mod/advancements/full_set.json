@@ -1,0 +1,63 @@
+{
+  "display": {
+    "icon": {
+      "item": "starry_mod:curios/wait"
+    },
+    "title": "记忆碎片",
+    "description": "集齐所有记忆碎片",
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png"
+  },
+  "parent": "starry_mod:get_memorandum",
+  "criteria": {
+    "get_wait": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "starry_mod:curios/wait"
+            ]
+          }
+        ]
+      }
+    },
+    "get_help": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "starry_mod:curios/help"
+            ]
+          }
+        ]
+      }
+    },
+    "get_perseverance": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "starry_mod:curios/perseverance"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "get_wait"
+    ],
+    [
+      "get_help"
+    ],
+    [
+      "get_perseverance"
+    ]
+  ]
+}

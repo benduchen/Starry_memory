@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:chain"
+    },
+    "$": {
+      "item": "minecraft:ghast_tear"
+    },
+    "%": {
+      "item": "starry_mod:material/original_star_ingot"
+    },
+    "&": {
+      "item": "minecraft:gold_ingot"
+    },
+    "@": {
+      "item": "minecraft:glass"
+    }
+  },
+  "pattern": [
+    " # ",
+    "&$%",
+    " @ "
+  ],
+  "result": {
+    "item": "starry_mod:material/golden_tear_crystal"
+  },
+  "show_notification": true
+}

@@ -1,0 +1,9 @@
+{
+  "entities": [
+    "minecraft:player"
+  ],
+  "slots": [
+    "stellar_tome",
+    "memory_fragment"
+  ]
+}

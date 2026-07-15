@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "minecraft:diamond"
+    },
+    "%": {
+      "item": "minecraft:blaze_rod"
+    },
+    "&": {
+      "item": "minecraft:yellow_dye"
+    },
+    "@": {
+      "item": "starry_mod:material/original_star_ingot"
+    }
+  },
+  "pattern": [
+    " @ ",
+    " # ",
+    " %&"
+  ],
+  "result": {
+    "item": "starry_mod:tool/half_star_sword"
+  },
+  "show_notification": true
+}

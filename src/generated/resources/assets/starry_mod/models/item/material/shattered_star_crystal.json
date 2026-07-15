@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "starry_mod:item/material/shattered_star_crystal"
+  }
+}

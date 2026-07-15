@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "starry_mod:item/tool/half_star_sword"
+  }
+}

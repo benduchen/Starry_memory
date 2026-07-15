@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "starry_mod:curios/wait",
+    "starry_mod:curios/help",
+    "starry_mod:curios/perseverance"
+  ]
+}

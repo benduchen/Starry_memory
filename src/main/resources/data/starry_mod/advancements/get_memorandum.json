@@ -1,0 +1,27 @@
+{
+  "display": {
+    "icon": {
+      "item": "starry_mod:curios/memorandum"
+    },
+    "title": "星忆梦片",
+    "description": "也许我在等人翻开我",
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png"
+  },
+  "criteria": {
+    "get_memo": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "starry_mod:curios/memorandum"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

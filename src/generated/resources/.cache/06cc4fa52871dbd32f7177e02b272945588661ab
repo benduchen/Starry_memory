@@ -1,0 +1,3 @@
+// 1.20.1	2026-06-25T18:52:38.8877127	Tags for minecraft:block mod id starry_mod
+b19a86286d12b4ca512c380b418cf20a2883b833 data/minecraft/tags/blocks/mineable/pickaxe.json
+b19a86286d12b4ca512c380b418cf20a2883b833 data/minecraft/tags/blocks/needs_diamond_tool.json

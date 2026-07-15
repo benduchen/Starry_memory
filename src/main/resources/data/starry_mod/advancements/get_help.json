@@ -1,0 +1,27 @@
+{
+  "display": {
+    "icon": {
+      "item": "starry_mod:curios/help"
+    },
+    "title": "互助",
+    "description": "原来时间是一个圆",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "starry_mod:full_set",
+  "criteria": {
+    "get_help": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "starry_mod:curios/help"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

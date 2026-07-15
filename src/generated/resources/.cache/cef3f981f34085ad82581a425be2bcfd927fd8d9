@@ -1,0 +1,11 @@
+// 1.20.1	2026-06-25T18:52:38.8837124	Item Models: starry_mod
+bce81b35e7cadddcca60a6c0f6f70400e368ba63 assets/starry_mod/models/item/curios/help.json
+afcd732f119c17cd20cdca0d49f00b23dd40e099 assets/starry_mod/models/item/curios/memorandum.json
+1e955882e83d5a7cb3f4a9585b10e0e9bb90b640 assets/starry_mod/models/item/curios/perseverance.json
+66d66b3509b38f058e058994d46b4b140b2102ce assets/starry_mod/models/item/curios/wait.json
+f554b8ffb92b853b68652567e9c146baacb7d0a0 assets/starry_mod/models/item/material/cloud_lychee.json
+7ca74a5619a8e09e17fbe42773c358071cd6b2c6 assets/starry_mod/models/item/material/golden_tear_crystal.json
+6249078b1e2c7224c53495f94ed02c7ed92e7741 assets/starry_mod/models/item/material/original_star_ingot.json
+4c044043d7af8bc734c6dea492ee786bba561072 assets/starry_mod/models/item/material/raw_original_star.json
+31e2f6ab8177fb80cc338403bbb82d0b80d16544 assets/starry_mod/models/item/material/shattered_star_crystal.json
+f5f7054f6a697d593ca702b004484f5934ca99e7 assets/starry_mod/models/item/tool/half_star_sword.json

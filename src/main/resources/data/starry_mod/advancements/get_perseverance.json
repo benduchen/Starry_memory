@@ -1,0 +1,27 @@
+{
+  "display": {
+    "icon": {
+      "item": "starry_mod:curios/perseverance"
+    },
+    "title": "坚持",
+    "description": "若事与愿违，坚持是否仍有意义？",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "starry_mod:full_set",
+  "criteria": {
+    "get_perseverance": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "starry_mod:curios/perseverance"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

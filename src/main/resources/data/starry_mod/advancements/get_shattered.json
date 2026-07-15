@@ -1,0 +1,27 @@
+{
+  "display": {
+    "icon": {
+      "item": "starry_mod:material/shattered_star_crystal"
+    },
+    "title": "碎星水晶",
+    "description": "到头来碎的是§k你自己§r",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "starry_mod:get_memorandum",
+  "criteria": {
+    "get_shattered": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "starry_mod:material/shattered_star_crystal"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "display": {
+    "icon": {
+      "item": "starry_mod:material/cloud_lychee"
+    },
+    "title": "云朵的味道",
+    "description": "我朋友说像在吃云——你还别说，真有点像",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "starry_mod:get_memorandum",
+  "criteria": {
+    "eat": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "starry_mod:material/cloud_lychee"
+          ]
+        }
+      }
+    }
+  }
+}

@@ -15,10 +15,74 @@ import java.util.Locale;
 import com.bendu.starry.item.ModItems;
 import com.bendu.starry.item.custom.MemorandumItem;
 import top.theillusivec4.curios.api.CuriosApi;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.ai.attributes.AttributeModifier;
+import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.nbt.ListTag;
+import java.util.UUID;
 
 public class HalfStarSwordItem extends SwordItem {
     public HalfStarSwordItem(Tier tier, int attackDamage, float attackSpeed, Properties properties) {
         super(tier, attackDamage, attackSpeed, properties);
+    }
+
+    private static final UUID STELLAR_DAMAGE_UUID = UUID.fromString("d4e5f6a7-b8c9-0123-4567-89abcdef0123");
+    private static final UUID BASE_ATTACK_DAMAGE_UUID = UUID.fromString("CB3F55D3-645C-4F38-A144-9C13A33C8003");
+
+    @Override
+    public void inventoryTick(ItemStack stack, Level level, Entity entity, int slotId, boolean isSelected) {
+        super.inventoryTick(stack, level, entity, slotId, isSelected);
+        if (level.isClientSide) return;
+        if (!(entity instanceof net.minecraft.world.entity.player.Player player)) return;
+        if (player.tickCount % 20 != 0) return;
+
+        int totalValue = CuriosApi.getCuriosInventory(player).map(handler -> {
+            var memo = handler.findFirstCurio(ModItems.MEMORANDUM.get());
+            if (memo.isEmpty()) return 0;
+            return MemorandumItem.getStellarValue(memo.get().stack());
+        }).orElse(0);
+
+        int thresholds = totalValue / 20;
+        double bonus = thresholds * 0.6;
+
+        double baseDamage = 0;
+        for (AttributeModifier mod : getDefaultAttributeModifiers(EquipmentSlot.MAINHAND).get(Attributes.ATTACK_DAMAGE)) {
+            if (mod.getId().equals(BASE_ATTACK_DAMAGE_UUID)) {
+                baseDamage = mod.getAmount();
+                break;
+            }
+        }
+
+        CompoundTag tag = stack.getOrCreateTag();
+        if (tag.contains("AttributeModifiers", 9)) {
+            ListTag mods = tag.getList("AttributeModifiers", 10);
+            for (int i = mods.size() - 1; i >= 0; i--) {
+                CompoundTag ct = (CompoundTag) mods.get(i);
+                if (ct.hasUUID("UUID")) {
+                    UUID uid = ct.getUUID("UUID");
+                    if (uid.equals(STELLAR_DAMAGE_UUID) || uid.equals(BASE_ATTACK_DAMAGE_UUID)) {
+                        mods.remove(i);
+                    }
+                }
+            }
+        }
+
+        double totalDamage = baseDamage + bonus;
+        if (!tag.contains("AttributeModifiers", 9)) {
+            tag.put("AttributeModifiers", new ListTag());
+        }
+        ListTag modList = tag.getList("AttributeModifiers", 10);
+        CompoundTag newMod = new CompoundTag();
+        newMod.putUUID("UUID", BASE_ATTACK_DAMAGE_UUID);
+        newMod.putString("Name", "Weapon modifier");
+        newMod.putDouble("Amount", totalDamage);
+        newMod.putInt("Operation", 0);
+        newMod.putString("Slot", "mainhand");
+        newMod.putString("AttributeName", "minecraft:generic.attack_damage");
+        modList.add(newMod);
     }
 
     @Override

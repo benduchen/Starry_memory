@@ -32,6 +32,7 @@ public class WaitItem extends Item {
             if (handler.findFirstCurio(ModItems.WAIT.get()).isPresent()) count++;
             if (handler.findFirstCurio(ModItems.HELP.get()).isPresent()) count++;
             if (handler.findFirstCurio(ModItems.PERSEVERANCE.get()).isPresent()) count++;
+            if (handler.findFirstCurio(ModItems.CHOICE.get()).isPresent()) count++;
             if (count == 0) return total;
             return total / count;
         }).orElse(0);

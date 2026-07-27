@@ -47,6 +47,18 @@
           }
         ]
       }
+    },
+    "get_choice": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "starry_mod:curios/choice"
+            ]
+          }
+        ]
+      }
     }
   },
   "requirements": [
@@ -58,6 +70,9 @@
     ],
     [
       "get_perseverance"
+    ],
+    [
+      "get_choice"
     ]
   ]
 }

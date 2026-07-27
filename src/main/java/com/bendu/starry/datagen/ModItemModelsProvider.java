@@ -21,6 +21,7 @@ public class ModItemModelsProvider extends ItemModelProvider {
         basicSubfolderItem(ModItems.WAIT.get());
         basicSubfolderItem(ModItems.HELP.get());
         basicSubfolderItem(ModItems.PERSEVERANCE.get());
+        basicSubfolderItem(ModItems.CHOICE.get());
         //物品
         basicSubfolderItem(ModItems.GOLDEN_TEAR_CRYSTAL.get());
         basicSubfolderItem(ModItems.ORIGINAL_STAR_INGOT.get());

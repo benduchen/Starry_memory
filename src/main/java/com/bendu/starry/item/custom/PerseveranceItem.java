@@ -32,6 +32,7 @@ public class PerseveranceItem extends Item {
             if (handler.findFirstCurio(ModItems.WAIT.get()).isPresent()) count++;
             if (handler.findFirstCurio(ModItems.HELP.get()).isPresent()) count++;
             if (handler.findFirstCurio(ModItems.PERSEVERANCE.get()).isPresent()) count++;
+            if (handler.findFirstCurio(ModItems.CHOICE.get()).isPresent()) count++;
             if (count == 0) return total;
             return total / count;
         }).orElse(0);
@@ -68,19 +69,32 @@ public class PerseveranceItem extends Item {
         final int displayValue = value;
         if (value > 0) {
             tooltip.add(Component.literal(""));
-            int lowPct = Math.min((100 - Math.min(displayValue, 100)) / 10, 10);
+            int lowPct = 100 - Math.min(displayValue, 100);
             int highPct = Math.max(displayValue - 100, 0);
-            String lowStr = "+" + lowPct;
-            String highStr = "+" + highPct;
+            String lowStr = String.valueOf(lowPct);
+            String highStr = String.valueOf(highPct);
             int lowColor = 0x55FF55;
             int highColor = 0x55FF55;
+            boolean lowActive = displayValue < 100;
+            boolean highActive = displayValue > 100;
             tooltip.add(Component.translatable("tooltip.starry_mod.perseverance.effect.low_prefix").withStyle(style -> style.withColor(net.minecraft.network.chat.TextColor.fromRgb(0x3399FF)))
                     .append(Component.literal(lowStr).withStyle(style -> style.withColor(net.minecraft.network.chat.TextColor.fromRgb(lowColor))))
-                    .append(Component.translatable("tooltip.starry_mod.perseverance.effect.suffix").withStyle(style -> style.withColor(net.minecraft.network.chat.TextColor.fromRgb(0x3399FF)))));
+                    .append(Component.translatable("tooltip.starry_mod.perseverance.effect.suffix").withStyle(style -> style.withColor(net.minecraft.network.chat.TextColor.fromRgb(0x3399FF))))
+                    .append(Component.literal("  "))
+                    .append(Component.translatable(lowActive ? "tooltip.starry_mod.perseverance.effect.active" : "tooltip.starry_mod.perseverance.effect.inactive")
+                            .withStyle(style -> style.withColor(net.minecraft.network.chat.TextColor.fromRgb(lowActive ? 0x55FF55 : 0x666666)))));
+            int atkPct = Math.max(highPct, 0) / 10;
             tooltip.add(Component.translatable("tooltip.starry_mod.perseverance.effect.high_prefix").withStyle(style -> style.withColor(net.minecraft.network.chat.TextColor.fromRgb(0x3399FF)))
                     .append(Component.literal(highStr).withStyle(style -> style.withColor(net.minecraft.network.chat.TextColor.fromRgb(highColor))))
-                    .append(Component.translatable("tooltip.starry_mod.perseverance.effect.suffix").withStyle(style -> style.withColor(net.minecraft.network.chat.TextColor.fromRgb(0x3399FF)))));
-        }
+                    .append(Component.translatable("tooltip.starry_mod.perseverance.effect.suffix").withStyle(style -> style.withColor(net.minecraft.network.chat.TextColor.fromRgb(0x3399FF))))
+                    .append(Component.literal("\uff0c").withStyle(style -> style.withColor(net.minecraft.network.chat.TextColor.fromRgb(0x3399FF))))
+                    .append(Component.translatable("tooltip.starry_mod.perseverance.effect.attack_prefix").withStyle(style -> style.withColor(net.minecraft.network.chat.TextColor.fromRgb(0x3399FF))))
+                    .append(Component.literal(String.valueOf(atkPct)).withStyle(style -> style.withColor(net.minecraft.network.chat.TextColor.fromRgb(highColor))))
+                    .append(Component.translatable("tooltip.starry_mod.perseverance.effect.attack_suffix").withStyle(style -> style.withColor(net.minecraft.network.chat.TextColor.fromRgb(0x3399FF))))
+                    .append(Component.literal("  "))
+                    .append(Component.translatable(highActive ? "tooltip.starry_mod.perseverance.effect.active" : "tooltip.starry_mod.perseverance.effect.inactive")
+                            .withStyle(style -> style.withColor(net.minecraft.network.chat.TextColor.fromRgb(highActive ? 0x55FF55 : 0x666666)))));
+            }
     }
 
     private void addLine(List<Component> tooltip, String key, int color) {

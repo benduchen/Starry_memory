@@ -103,7 +103,7 @@ public class ModEnUsLangProvider extends LanguageProvider {
         add("tooltip.starry_mod.memorandum.story.4", "I don\u2019t know.");
         add("tooltip.starry_mod.memorandum.story.5", "Maybe I\u2019m waiting for someone to open me.");
         add("tooltip.starry_mod.memorandum.info.share", "Other Life Fragments will share the current Stellar Value");
-        add("tooltip.starry_mod.memorandum.info.max_value", "Current max Stellar Value: 100");
+        add("tooltip.starry_mod.memorandum.info.max_value", "Current max Stellar Value: ");
         add("tooltip.starry_mod.memorandum.info.fragment_slots", "Unlocks 6 Memory Fragment slots when equipped");
 
         // Wait & Help shift hint
@@ -150,9 +150,27 @@ public class ModEnUsLangProvider extends LanguageProvider {
         add("tooltip.starry_mod.perseverance.desc.2", "If the ending doesn’t satisfy you, then it’s not the ending yet.");
         add("tooltip.starry_mod.perseverance.story.1", "“So, my answer is: if things don’t go your way, first stop and ask yourself—are you “stubbornly” banging your head against a wall, or “resiliently” exploring? If the former, changing direction isn’t giving up—it’s wisdom. If the latter, please keep going.”");
         add("tooltip.starry_mod.perseverance.story.2", "“Truly brave men dare to face the bleakness of life, and dare to look directly at the streaming blood. What grievous mourners and happy ones they are! Yet the Creator oft designs for the mediocre, to wash away old traces with the passage of time, leaving only pale red bloodstains and faint sorrow. In this pale red blood and faint sorrow, people steal a moment’s respite, sustaining this world that is human yet inhuman. I know not when such a world will come to an end!” ——In Memory of Liu Hezhen");
-        add("tooltip.starry_mod.perseverance.effect.low_prefix", "When Shared Stellar Value is below 100, gain ");
-        add("tooltip.starry_mod.perseverance.effect.high_prefix", "When Shared Stellar Value is above 100, gain ");
+        add("tooltip.starry_mod.perseverance.effect.low_prefix", "When Shared Stellar Value is below 100, gain +");
+        add("tooltip.starry_mod.perseverance.effect.high_prefix", "When Shared Stellar Value is above 100, gain +");
         add("tooltip.starry_mod.perseverance.effect.suffix", "% max health");
+        add("tooltip.starry_mod.perseverance.effect.attack_prefix", "Every 10 points above 100: +");
+        add("tooltip.starry_mod.perseverance.effect.attack_suffix", "% attack damage");
+        add("tooltip.starry_mod.perseverance.effect.active", "【Active】");
+        add("tooltip.starry_mod.perseverance.effect.inactive", "【Inactive】");
+        // Choice tooltip
+        add(ModItems.CHOICE.get(), "'Choice'");
+        add("tooltip.starry_mod.choice.shared_value_prefix", "Shared Stellar Value: ");
+        add("tooltip.starry_mod.choice.shift_hint", "Hold ");
+        add("tooltip.starry_mod.choice.shift_suffix", " to view story");
+        add("tooltip.starry_mod.choice.desc.1", "A move once made, no regrets.");
+        add("tooltip.starry_mod.choice.separator", "\u00a77\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500");
+        add("tooltip.starry_mod.choice.desc.2", "Among a million endings, perhaps there really is that one perfect path. But if you dare not choose, if you regret the choice you made, if you complain about the past, if you dare not face the present \u2014 then you will be the same with any other choice.");
+        add("tooltip.starry_mod.choice.story.1", "The only thing my grandfather ever told me about chess \u2014 \"A move once made, no regrets.\" I was holding a piece mid-air, wanting to change its place. He pressed my hand down. He said there are no perfect moves in this world \u2014 only moves you make, and then walk forward with. Years later, standing at the crossroads of my life, I remembered that afternoon. Sunlight filtered through the locust leaves, falling onto the board. I made my move. I never looked back.");
+        add("tooltip.starry_mod.choice.effect.low_prefix", "When Shared Stellar Value is below 100: +");
+        add("tooltip.starry_mod.choice.effect.low_suffix", "% attack damage");
+        add("tooltip.starry_mod.choice.effect.high_line", "When Shared Stellar Value is above 100: +200 Memo cap");
+        add("tooltip.starry_mod.choice.effect.active", "\u3010Active\u3011");
+        add("tooltip.starry_mod.choice.effect.inactive", "\u3010Inactive\u3011");
         // Narrator subtitles
         add("subtitles.starry_mod.narrator.memorandum_first_equip", "Test text 1. Triggered on first equipping the Memorandum.");
 

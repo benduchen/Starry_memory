@@ -104,7 +104,7 @@ public class ModZhCnLangProvider extends LanguageProvider {
         add("tooltip.starry_mod.memorandum.story.4", "我不知道。");
         add("tooltip.starry_mod.memorandum.story.5", "也许我在等人翻开我。");
         add("tooltip.starry_mod.memorandum.info.share", "其他人生碎片将共享当前分辉值");
-        add("tooltip.starry_mod.memorandum.info.max_value", "当前最大分辉值: 100");
+        add("tooltip.starry_mod.memorandum.info.max_value", "当前最大分辉值：");
         add("tooltip.starry_mod.memorandum.info.fragment_slots", "佩戴后解锁6记忆碎片栏位");
 
         // Wait & Help shift hint
@@ -151,10 +151,28 @@ public class ModZhCnLangProvider extends LanguageProvider {
         add("tooltip.starry_mod.perseverance.desc.2", "如果结局不能让你满意，那就还不是结局。");
         add("tooltip.starry_mod.perseverance.story.1", "“所以，我的答案是：如果事与愿违，请先停下来区分——你是在“固执”地撞南墙，还是在“坚韧”地探索？如果是前者，换个方向不是放弃，是智慧；如果是后者，请继续。");
         add("tooltip.starry_mod.perseverance.story.2", "真的猛士，敢于直面惨淡的人生，敢于正视淋漓的鲜血。这是怎样的哀痛者和幸福者？然而造化又常常为庸人设计，以时间的流驶，来洗涤旧迹，仅使留下淡红的血色和微漠的悲哀。在这淡红的血色和微漠的悲哀中，又给人暂得偷生，维持着这似人非人的世界。我不知道这样的世界何时是一个尽头！————《记念刘和珍君》");
-        add("tooltip.starry_mod.perseverance.effect.low_prefix", "当共享分辉值低于100，每少10点获得 ");
-        add("tooltip.starry_mod.perseverance.effect.high_prefix", "当共享分辉值高于100，每高1点加 ");
+        add("tooltip.starry_mod.perseverance.effect.low_prefix", "当共享分辉值低于100，当前获得 +");
+        add("tooltip.starry_mod.perseverance.effect.high_prefix", "当共享分辉值高于100，每高1点加 +");
         add("tooltip.starry_mod.perseverance.effect.suffix", "% 生命上限");
+        add("tooltip.starry_mod.perseverance.effect.attack_prefix", "每高10点加 +");
+        add("tooltip.starry_mod.perseverance.effect.attack_suffix", "% 攻击伤害");
+        add("tooltip.starry_mod.perseverance.effect.active", "【生效中】");
+        add("tooltip.starry_mod.perseverance.effect.inactive", "【未生效】");
 
+        // Choice tooltip
+        add(ModItems.CHOICE.get(), "\u2018\u9009\u62e9\u2019");
+        add("tooltip.starry_mod.choice.shared_value_prefix", "\u5171\u4eab\u5206\u8f89\u503c\uff1a");
+        add("tooltip.starry_mod.choice.shift_hint", "\u6309\u4f4f ");
+        add("tooltip.starry_mod.choice.shift_suffix", " \u67e5\u770b\u6545\u4e8b");
+        add("tooltip.starry_mod.choice.desc.1", "\u843d\u5b50\u65e0\u6094\u3002");
+        add("tooltip.starry_mod.choice.separator", "\u00a77\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500");
+        add("tooltip.starry_mod.choice.desc.2", "\u5343\u4e07\u4e2a\u7ed3\u5c40\u4e5f\u8bb8\u771f\u6709\u90a3\u4e2a\u6700\u5b8c\u7f8e\u7684\uff0c\u4f46\u5982\u679c\u4e0d\u6562\u9009\u62e9\uff0c\u9009\u62e9\u4e86\u60f3\u540e\u6094\uff0c\u9009\u62e9\u4e86\u62b1\u6028\u8fc7\u53bb\uff0c\u9009\u62e9\u4e86\u4e0d\u6562\u9762\u5bf9\u73b0\u5728\uff0c\u90a3\u4f60\u4f1a\u5728\u9009\u62e9\u53e6\u4e00\u4e2a\u65f6\u4e5f\u5982\u6b64\u3002");
+        add("tooltip.starry_mod.choice.story.1", "\u6211\u8bb0\u5f97\u7237\u7237\u6559\u6211\u4e0b\u68cb\u65f6\u8bf4\u7684\u552f\u4e00\u4e00\u53e5\u8bdd\u2014\u2014\"\u843d\u5b50\u65e0\u6094\u3002\"\u5f53\u65f6\u6211\u4e3e\u7740\u68cb\u5b50\u60ac\u5728\u534a\u7a7a\uff0c\u60f3\u6362\u4e2a\u4f4d\u7f6e\u3002\u4ed6\u6309\u4f4f\u4e86\u6211\u7684\u624b\u3002\u4ed6\u8bf4\uff0c\u8fd9\u4e16\u4e0a\u6ca1\u6709\u5b8c\u7f8e\u7684\u68cb\uff0c\u53ea\u6709\u4f60\u4e0b\u4e86\u3001\u7136\u540e\u8d70\u4e0b\u53bb\u7684\u68cb\u3002\u540e\u6765\u6211\u7ad9\u5728\u4eba\u751f\u7684\u5dee\u8def\u53e3\uff0c\u60f3\u8d77\u90a3\u4e2a\u5348\u540e\u3002\u9633\u5149\u7a7f\u8fc7\u69d0\u6811\u53f6\uff0c\u843d\u5728\u68cb\u76d8\u4e0a\u3002\u6211\u843d\u4e86\u5b50\uff0c\u6ca1\u518d\u56de\u5934\u3002");
+        add("tooltip.starry_mod.choice.effect.low_prefix", "\u5f53\u5171\u4eab\u5206\u8f89\u503c\u5c0f\u4e8e100\u65f6\uff1a\u653b\u51fb\u529b +");
+        add("tooltip.starry_mod.choice.effect.low_suffix", "%");
+        add("tooltip.starry_mod.choice.effect.high_line", "\u5f53\u5171\u4eab\u5206\u8f89\u503c\u5927\u4e8e100\u65f6\uff1a\u83b7\u5f97200\u5907\u5fd8\u5f55\u5206\u8f89\u503c\u4e0a\u9650");
+        add("tooltip.starry_mod.choice.effect.active", "\u3010\u751f\u6548\u4e2d\u3011");
+        add("tooltip.starry_mod.choice.effect.inactive", "\u3010\u672a\u751f\u6548\u3011");
         // Narrator subtitles
         add("subtitles.starry_mod.narrator.memorandum_first_equip", "这是测试文本1，在备忘录首次装备时生效");
 

@@ -45,6 +45,7 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.WAIT.get());
                         pOutput.accept(ModItems.HELP.get());
                         pOutput.accept(ModItems.PERSEVERANCE.get());
+                        pOutput.accept(ModItems.CHOICE.get());
 
                     }).build());
 

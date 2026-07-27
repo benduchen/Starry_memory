@@ -16,7 +16,8 @@ import java.util.List;
 
 public class MemorandumItem extends Item {
     private static final String TAG_STELLAR_VALUE = "stellar_value";
-    private static final int DEFAULT_MAX = 100;
+    private static final String TAG_MAX_CAP = "max_cap";
+    private static final int DEFAULT_MAX = 520299;
     private static final int TICK_INTERVAL = 20;
 
     public MemorandumItem(Properties properties) {
@@ -35,7 +36,19 @@ public class MemorandumItem extends Item {
         stack.getOrCreateTag().putInt(TAG_STELLAR_VALUE, Math.min(value, DEFAULT_MAX));
     }
 
-@Override
+    public static int getMaxCap(ItemStack stack) {
+        CompoundTag tag = stack.getTag();
+        if (tag != null && tag.contains(TAG_MAX_CAP)) {
+            return tag.getInt(TAG_MAX_CAP);
+        }
+        return 100;
+    }
+
+    public static void setMaxCap(ItemStack stack, int cap) {
+        stack.getOrCreateTag().putInt(TAG_MAX_CAP, Math.min(cap, DEFAULT_MAX));
+    }
+
+   @Override
     public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> tooltip, TooltipFlag flag) {
         int value = getStellarValue(stack);
         tooltip.add(Component.translatable("tooltip.starry_mod.memorandum.stellar_value").withStyle(ChatFormatting.GRAY)
@@ -65,7 +78,13 @@ public class MemorandumItem extends Item {
 
         tooltip.add(Component.literal(""));
         addLine(tooltip, "tooltip.starry_mod.memorandum.info.share", 0x555555);
-        addLine(tooltip, "tooltip.starry_mod.memorandum.info.max_value", 0x555577);
+        int capFromNbt = getMaxCap(stack);
+        final int maxValue = capFromNbt;
+        tooltip.add(Component.translatable("tooltip.starry_mod.memorandum.info.max_value")
+                .withStyle(style -> style.withColor(net.minecraft.network.chat.TextColor.fromRgb(0x555577)))
+                .append(Component.literal(String.valueOf(maxValue))
+                        .withStyle(style -> style.withColor(net.minecraft.network.chat.TextColor.fromRgb(maxValue > 100 ? 0x55FF55 : 0x555577)))));
+
             tooltip.add(Component.literal(""));
             addLine(tooltip, "tooltip.starry_mod.memorandum.info.fragment_slots", 0xD4A030);
             tooltip.add(Component.literal(""));

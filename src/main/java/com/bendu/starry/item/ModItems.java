@@ -8,6 +8,7 @@ import com.bendu.starry.item.custom.HelpItem;
 import com.bendu.starry.item.custom.HalfStarSwordItem;
 import com.bendu.starry.item.custom.CloudLycheeItem;
 import com.bendu.starry.item.custom.PerseveranceItem;
+import com.bendu.starry.item.custom.ChoiceItem;
 import com.bendu.starry.item.custom.RawOriginalStarItem;
 import com.bendu.starry.item.custom.OriginalStarIngotItem;
 import com.bendu.starry.item.custom.GoldenTearCrystalItem;
@@ -45,6 +46,9 @@ public class ModItems {
             ITEMS.register("curios/wait", () -> new WaitItem(new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> PERSEVERANCE =
             ITEMS.register("curios/perseverance", () -> new PerseveranceItem(new Item.Properties().stacksTo(1)));
+
+    public static final RegistryObject<Item> CHOICE =
+            ITEMS.register("curios/choice", () -> new ChoiceItem(new Item.Properties().stacksTo(1)));
 
     public static final RegistryObject<Item> HELP =
             ITEMS.register("curios/help", () -> new HelpItem(new Item.Properties().stacksTo(1)));
